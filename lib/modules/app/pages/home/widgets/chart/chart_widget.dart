@@ -3,7 +3,8 @@ import 'package:DevQuiz/core/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class ChartWidget extends StatelessWidget {
-  const ChartWidget({Key? key}) : super(key: key);
+  final int percent;
+  const ChartWidget({Key? key, this.percent = 0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class ChartWidget extends StatelessWidget {
           ),
           Center(
             child: Text(
-              "75%",
+              "$percent%",
               style: AppTextStyles.heading,
             ),
           )
